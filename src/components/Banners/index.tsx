@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button";
 import { Container, ContentText, GroupBanner, Img } from "./styles";
 
 interface IBannerProps {
@@ -15,7 +16,16 @@ export const BannerHome: React.FC<IBannerProps> = ({ img, alt, text }) => {
       <GroupBanner>
         <Img src={img} alt={alt} />
 
-        {text === true ? <ContentText>{TextBanner}</ContentText> : null}
+        {text === true ? (
+          <>
+            <ContentText>{TextBanner}</ContentText>
+            <Button
+              onClick={() => console.log("clicado")}
+              loading
+              title="AAAAAAAAAAAA"
+            />
+          </>
+        ) : null}
       </GroupBanner>
     </Container>
   );

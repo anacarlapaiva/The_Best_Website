@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
+  width: 100%;
+  height: 53rem;
 `;
 
 export const Img = styled.img`
@@ -12,6 +13,7 @@ export const Img = styled.img`
   vertical-align: middle;
   height: 53rem;
   position: absolute;
+
 `;
 
 export const GroupBanner = styled.div`
@@ -32,4 +34,10 @@ export const ContentText = styled.h1`
   p {
     color: #f6a000;
   }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  background-color: #f6a000;
+  color: #fff;
 `;
