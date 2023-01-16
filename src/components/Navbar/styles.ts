@@ -40,6 +40,7 @@ export const ListOfLinks = styled.ul<IMobileProps>`
   list-style: none;
   text-align: center;
   justify-content: space-between;
+  overflow: hidden;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -59,6 +60,9 @@ export const ListOfLinks = styled.ul<IMobileProps>`
 export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
   display: flex;
+  &:hover, :active{
+    border-bottom: 3px solid #fff;
+  }
 
   @media screen and (max-width: 960px) {
     width: 100%;
