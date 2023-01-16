@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import LogoImage from "../../assets/Images/Logo.svg";
 
 interface IMobileProps {
   open: boolean;
@@ -16,7 +15,7 @@ export const Nav = styled.nav`
   background: #000;
   height: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   position: fixed;
@@ -26,12 +25,10 @@ export const Nav = styled.nav`
   padding: 0 263px;
 `;
 
-export const Logo = styled.div`
-  justify-content: flex-start;
+export const Logo = styled.img`
   cursor: pointer;
   display: flex;
-  width: 10rem;
-  background-image: url(${LogoImage});
+  height: 45%;
 `;
 
 export const ListOfLinks = styled.ul<IMobileProps>`
@@ -60,9 +57,6 @@ export const ListOfLinks = styled.ul<IMobileProps>`
 export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
   display: flex;
-  &:hover, :active{
-    border-bottom: 3px solid #fff;
-  }
 
   @media screen and (max-width: 960px) {
     width: 100%;

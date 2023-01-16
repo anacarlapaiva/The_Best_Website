@@ -10,6 +10,8 @@ import {
 } from "./styles";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import LogoNav from '../../assets/Images/logo_nav.png'
+
 export const Navbar: React.FC = () => {
   const [click, setClick] = useState(false);
 
@@ -20,7 +22,7 @@ export const Navbar: React.FC = () => {
   return (
     <Container>
       <Nav>
-        <Logo />
+        <Logo src={LogoNav} alt="Logo do The best açaí"/>
 
         <ListOfLinks open={click} onClick={handleClick}>
           <NavItem>
