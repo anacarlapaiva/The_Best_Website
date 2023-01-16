@@ -14,16 +14,6 @@ const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
 
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-	content: '';
-	content: none;
-    }   
-    article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
 h1 {
   font-size: 3.4rem;
 }

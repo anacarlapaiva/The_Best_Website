@@ -1,20 +1,22 @@
 import React from "react";
-import { Container, ContentText, Img } from "./styles";
+import { Container, ContentText, GroupBanner, Img } from "./styles";
 
 interface IBannerProps {
   img: string;
-  alt: string
-  text?: string;
+  alt: string;
+  text?: boolean;
 }
 
-export const BannerHome: React.FC<IBannerProps> = ({img, alt, text}) => {
+export const BannerHome: React.FC<IBannerProps> = ({ img, alt, text }) => {
+  const TextBanner = " baixe nosso app e garanta seu açaí hoje mesmo!";
+
   return (
     <Container>
-      <Img src={img} alt={alt}/>
+      <GroupBanner>
+        <Img src={img} alt={alt} />
 
-      <ContentText>
-        {text}
-      </ContentText>
+        {text === true ? <ContentText>{TextBanner}</ContentText> : null}
+      </GroupBanner>
     </Container>
   );
 };
